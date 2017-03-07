@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import re
 import sqlite3
 import os
 
@@ -50,9 +49,6 @@ class Database(GObject.GObject):
     def __init__(self):
         GObject.GObject.__init__(self)
         self.conn = None
-
-    def is_opened(self):
-        return self.conn is not None
 
     def open(self, filename):
         if self.conn:
